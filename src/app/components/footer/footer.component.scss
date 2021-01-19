@@ -1,0 +1,15 @@
+@import "src/styles";
+
+.footer {
+    width: 100%;
+    height: 6rem;
+    background: $gray-11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer-text {
+        color: $gray-1;
+        font-weight: bold;
+    }
+}

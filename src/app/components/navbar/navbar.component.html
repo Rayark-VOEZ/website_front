@@ -1,0 +1,76 @@
+<nav id="navbar" class="navbar">
+    <div class="navbar-start">
+        <button class="navbar-toggle" (click)="toggle()">
+            <fa-icon [icon]="faBars" size="2x" fixedWidth="true"></fa-icon>
+        </button>
+
+
+        <a class="navbar-brand" routerLink="/">
+<!--            <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="logo">-->
+        </a>
+    </div>
+
+    <form>
+        <input class="navbar-search" placeholder="搜索" routerLink="search">
+    </form>
+
+    <div class="navbar-end" *ngIf="true">
+        <a class="signup" routerLink="signup">注册</a>
+        <a class="login" routerLink="login">登录</a>
+    </div>
+
+    <div class="navbar-end" *ngIf="false">
+        <img class="user-icon" src="favicon.ico" alt="">
+        <p class="user-name">欢迎</p>
+    </div>
+</nav>
+
+<aside class="sidebar" #sidebar>
+    <ul class="sidebar-nav">
+        <li class="sidebar-divider"></li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="home" routerLinkActive="active" (click)="toggle()">
+                <fa-icon class="link-icon" [icon]="faHome"></fa-icon> 主页</a>
+        </li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="trending" routerLinkActive="active" (click)="toggle()">
+                <fa-icon class="link-icon" [icon]="faFire"></fa-icon> 热门</a>
+        </li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="random" routerLinkActive="active" (click)="toggle()">
+                <fa-icon class="link-icon" [icon]="faRandom"></fa-icon> 随机</a>
+        </li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="images" routerLinkActive="active" (click)="toggle()">
+                <fa-icon class="link-icon" [icon]="faImage"></fa-icon>图片</a>
+        </li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="search" routerLinkActive="active" (click)="toggle()">
+                <fa-icon class="link-icon" [icon]="faSearch"></fa-icon>搜索</a>
+        </li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="browse" routerLinkActive="active" (click)="toggle()">
+                <fa-icon class="link-icon" [icon]="faCubes"></fa-icon>浏览</a>
+        </li>
+        <li class="sidebar-divider"></li>
+        <li class="sidebar-category">账户</li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="login" routerLinkActive="active" (click)="toggle()">
+                <fa-icon class="link-icon" [icon]="faSignIn"></fa-icon>登录</a>
+        </li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="signup" routerLinkActive="active" (click)="toggle()">
+                <fa-icon class="link-icon" [icon]="faUserPlus"></fa-icon>注册</a>
+        </li>
+        <li class="sidebar-divider"></li>
+        <li class="sidebar-category">链接</li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="about" routerLinkActive="active" (click)="toggle()">
+                <fa-icon class="link-icon" [icon]="faInfoCircle"></fa-icon>关于</a>
+        </li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="contact" routerLinkActive="active" (click)="toggle()">
+                <fa-icon class="link-icon" [icon]="faUserPlus"></fa-icon>联系我们</a>
+        </li>
+    </ul>
+</aside>

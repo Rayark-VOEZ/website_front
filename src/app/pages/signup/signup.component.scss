@@ -1,0 +1,164 @@
+@import "~src/styles.scss";
+
+.container {
+    width: 100%;
+    height: 100vh;
+    padding-top: 4rem;
+    background: rgba(20, 20, 20, .8) url("~src/assets/background.jpg") no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .login-form {
+        //margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        form {
+            margin: 0 auto;
+            padding: 1.5rem;
+            border-radius: 2px;
+            background: rgba(31,31,31,.8);
+            display: flex;
+            flex-direction: column;
+
+            .form-control {
+                margin-bottom: 2rem;
+                display: flex;
+                flex-direction: column;
+
+                .form-input {
+                    height: 2.5rem;
+                    margin-bottom: .25rem;
+                    padding: 0 1rem;
+                    outline: none;
+                    caret-color: $orange-5;
+                    border: none;
+                    border-radius: 2px;
+                    color: $gray-4;
+                    background: rgba(20, 20, 20, .8);
+                }
+
+                .form-text {
+                    color: $gray-6;
+                    font-size: small;
+                }
+            }
+
+            .login {
+                height: 2.5rem;
+                margin-bottom: 2rem;
+                outline: none;
+                border: none;
+                border-radius: 2px;
+                letter-spacing: .2rem;
+                font-size: 1rem;
+                color: $gray-4;
+                background: $orange-5;
+            }
+
+            .login:hover {
+                cursor: pointer;
+                background: $orange-4;
+            }
+
+            .cant-login {
+                height: 2.5rem;
+                line-height: 2.5rem;
+                text-align: center;
+                border: 1px solid $gray-8;
+                border-radius: 2px;
+                color: $orange-5;
+                background: rgba(0,0,0,0);
+                display: block;
+            }
+
+            .cant-login:hover {
+                cursor: pointer;
+                background: rgba(255, 213, 145, .3);
+            }
+        }
+
+        div {
+            .signup {
+                height: 2.5rem;
+                line-height: 2.5rem;
+                text-align: center;
+                border: 1px solid $gray-8;
+                border-radius: 2px;
+                color: $orange-5;
+                background: rgba(0,0,0,0);
+                display: block;
+            }
+
+            .signup:hover {
+                cursor: pointer;
+                background: rgba(255, 213, 145, .3);
+            }
+        }
+    }
+}
+
+
+// 手机
+@media (max-width: 768px) {
+    .login-form {
+        margin-top: 4rem;
+        margin-bottom: 10vh;
+    }
+    .form-input {
+        width: 80vw;
+    }
+
+    .login {
+        width: 80vw;
+    }
+
+    .cant-login {
+        width: 80vw;
+    }
+
+    .signup {
+        width: 80vw;
+    }
+}
+
+// 平板
+@media (min-width: 768px) {
+    .form-input {
+        width: 24rem;
+    }
+
+    .login {
+        width: 24rem;
+    }
+
+    .cant-login {
+        width: 24rem;
+    }
+
+    .signup {
+        width: 24rem;
+    }
+}
+
+// 电脑
+@media (min-width: 992px) {
+    .form-input {
+        width: 24rem;
+    }
+
+    .login {
+        width: 24rem;
+    }
+
+    .cant-login {
+        width: 24rem;
+    }
+
+    .signup {
+        width: 24rem;
+    }
+}
